@@ -1,7 +1,9 @@
+:root {
+  --hover-color: #0077b5;
+}
 * {
   box-sizing: border-box;
 }
-
 .rubik-font {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
@@ -24,30 +26,31 @@ nav a {
   color: #222;
 }
 nav a:hover {
-  color: #0077b5;
+  color: var(--hover-color);
 }
 header {
   max-width: 960px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
+header h1 {
+  font-weight: 300;
+}
 main {
   max-width: 960px;
   margin: 0 auto;
-  /* padding: 2rem 1rem; */
+}
+section h2 {
+  font-weight: 300;
+}
+section p {
+  line-height: 1.5rem;
 }
 footer {
   max-width: 960px;
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-h1,
-h2 {
-  margin: 0 0 0.5rem;
-}
-/* section {
-  margin: 2rem 0;
-} */
 .card {
   background-color: #fff;
   border: 1px solid #eee;
@@ -56,7 +59,7 @@ h2 {
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.social-links {
+/* .social-links {
   margin-top: 1rem;
 }
 .social-links a {
@@ -71,6 +74,30 @@ h2 {
 }
 .social-links a:first-child:hover {
   color: #171515;
+} */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #646464;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: var(--hover-color);
+}
+
+.contact-links i {
+  font-size: 1.2rem;
 }
 
 @media (min-width: 700px) {

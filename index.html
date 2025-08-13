@@ -32,23 +32,47 @@
     </header>
 
     <main>
+      <section id="about" class="card">
+        <h2>About</h2>
+        <p>
+          Software Engineer (B.Sc.) with a specialty in Full Stack Development .
+          I’m diligent, responsible, and highly motivated, with a passion for
+          turning ideas into engaging, user-friendly experiences. I am curious,
+          love to develop, and have a strong passion for learning.
+        </p>
+      </section>
       <section id="projects" class="card">
         <h2>Projects</h2>
         <!-- cards here -->
       </section>
-      <section id="about" class="card">
-        <h2>About</h2>
-        <!-- short bio -->
-      </section>
       <section id="contact" class="card">
         <h2>Contact</h2>
-        <!-- email/socials -->
+        <div class="contact-links">
+          <a> <i class="fas fa-phone"></i> 0546465319 </a>
+          <a href="mailto:eliysamaea@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i> eliysamaea@gmail.com
+          </a>
+          <a
+            href="https://github.com/eliyasamary"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/eliya-samary-atias-898463223/"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer rubik-font card">
+    <footer class="site-footer rubik-font">
       © <span id="y"></span> Eliya Samary Atias
-      <div class="social-links">
+      <!-- <div class="social-links">
         <a
           href="https://github.com/eliyasamary"
           target="_blank"
@@ -63,7 +87,7 @@
         >
           <i class="fab fa-linkedin"></i>
         </a>
-      </div>
+      </div> -->
     </footer>
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
