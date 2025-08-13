@@ -21,58 +21,109 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="rubik-font">
-    <header class="site-header card">
-      <h1>Eliya Samary Atias</h1>
-      <p>Software Engineer (BSc)</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section id="about" class="card">
-        <h2>About</h2>
-        <p>
-          Software Engineer (B.Sc.) with a specialty in Full Stack Development .
-          I’m diligent, responsible, and highly motivated, with a passion for
-          turning ideas into engaging, user-friendly experiences. I am curious,
-          love to develop, and have a strong passion for learning.
-        </p>
-      </section>
-      <section id="projects" class="card">
-        <h2>Projects</h2>
-        <!-- cards here -->
-      </section>
-      <section id="contact" class="card">
-        <h2>Contact</h2>
-        <div class="contact-links">
-          <a> <i class="fas fa-phone"></i> 0546465319 </a>
-          <a href="mailto:eliysamaea@gmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i> eliysamaea@gmail.com
-          </a>
-          <a
-            href="https://github.com/eliyasamary"
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/eliya-samary-atias-898463223/"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer rubik-font">
-      © <span id="y"></span> Eliya Samary Atias
-      <!-- <div class="social-links">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div id="wrapper">
+      <header class="site-header card">
+        <img
+          src="./assets/eliya_samary_atias.jpg"
+          alt="Eliya Samary Atias"
+          class="profile-image"
+        />
+        <h1>Eliya Samary Atias</h1>
+        <p>Software Engineer (BSc)</p>
+      </header>
+      <main>
+        <section id="about" class="card">
+          <h1>About</h1>
+          <p>
+            Software Engineer (B.Sc.) with a specialty in Full Stack Development
+            . I’m diligent, responsible, and highly motivated, with a passion
+            for turning ideas into engaging, user-friendly experiences. I am
+            curious, love to develop, and have a strong passion for learning.
+          </p>
+        </section>
+        <section id="projects" class="card">
+          <h1>Projects</h1>
+          <div class="projects-container">
+            <div class="project-row">
+              <img src="./assets/medigment_logo.png" alt="Medigment_Logo" />
+              <div class="project-details">
+                <p class="project-tags">HTML, CSS, JavaScript</p>
+                <h3 class="project_title">Medigment</h3>
+                <p class="project-desc">
+                  Medication management system that reminds users to take
+                  medication on time, with patient and carer roles allowing
+                  carers to monitor patients and receive adherence updates.
+                </p>
+                <a href="medigment.html">More Details</a>
+              </div>
+            </div>
+            <div class="project-row">
+              <div class="project-details">
+                <p class="project-tags">
+                  Node.js, Express, MongoDB, React Native
+                </p>
+                <h3 class="project_title">Fixit</h3>
+                <p class="project-desc">
+                  A fault tracking and management system designed to streamline
+                  fault reporting for end-users, while ensuring maintenance
+                  personnel receive categorized fault reports based on location
+                  and urgency.
+                </p>
+                <a href="fixit.html">More Details</a>
+              </div>
+              <img src="./assets/fixit_logo.jpeg" alt="Fixit_Logo" />
+            </div>
+            <div class="project-row">
+              <img src="./assets/smartchat_logo.png" alt="SmartChat_Logo" />
+              <div class="project-details">
+                <p class="project-tags">
+                  Node.js, Express, MongoDB, React, Socket, APIs
+                </p>
+                <h3 class="project_title">SmartChat</h3>
+                <p class="project-desc">
+                  Conversational AI platform that integrates multiple AI
+                  services to deliver high-quality, personalized interactions in
+                  real time. Built with Node.js, supporting multi-platform
+                  evaluations and dynamic chat sessions. Developed as part of a
+                  Software Engineering B.Sc. Final Project.
+                </p>
+                <a href="smartchat.html">More Details</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="card">
+          <h1>Contact</h1>
+          <div class="contact-links">
+            <a> <i class="fas fa-phone"></i> 0546465319 </a>
+            <a href="mailto:eliysamaea@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i> eliysamaea@gmail.com
+            </a>
+            <a
+              href="https://github.com/eliyasamary"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eliya-samary-atias-898463223/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer class="site-footer rubik-font">
+        © <span id="y"></span> Eliya Samary Atias
+        <!-- <div class="social-links">
         <a
           href="https://github.com/eliyasamary"
           target="_blank"
@@ -88,7 +139,8 @@
           <i class="fab fa-linkedin"></i>
         </a>
       </div> -->
-    </footer>
+      </footer>
+    </div>
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
