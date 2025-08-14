@@ -1,5 +1,6 @@
 :root {
   --primary-color: #8f87f1;
+  --secondary-color: #c68efd;
 }
 * {
   box-sizing: border-box;
@@ -144,16 +145,16 @@ section p {
 .projects-container {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 .project-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* gap: 16px; */
   align-items: stretch;
 }
 .project-row a {
   text-decoration: none;
-  color: #222;
+  color: var(--secondary-color);
 }
 .project-row a:hover {
   color: var(--primary-color);
