@@ -31,12 +31,17 @@
   </head>
   <body class="rubik-font">
     <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#military-service">Military Service</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#military-service">Military Service</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
     <div id="wrapper">
       <header class="site-header card" data-aos="fade-up">
@@ -114,8 +119,23 @@
                 <li>AWS</li>
                 <li>Docker</li>
                 <li>CI/CD (GitHub Actions)</li>
-                <li>AWS</li>
+                <li>Render (Hosting)</li>
+                <li>Linux</li>
                 <li>Version Control (Git)</li>
+              </ul>
+            </div>
+            <div
+              class="skills-category"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <h3>
+                <i class="fas fa-laptop-code"></i> Programming & Data Analysis
+              </h3>
+              <ul>
+                <li>Python</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
               </ul>
             </div>
             <div
@@ -296,6 +316,14 @@
               </div>
             </div>
           </div>
+          <p class="more-projects-p">
+            <em
+              >For more projects, check my
+              <a href="https://github.com/eliyasamary" target="_blank"
+                >GitHub account</a
+              ></em
+            >
+          </p>
         </section>
         <section id="contact" class="card" data-aos="fade-up">
           <h1>Contact</h1>
@@ -339,6 +367,30 @@
           mirror: true,
         });
         AOS.refresh();
+      });
+    </script>
+    <script>
+      function toggleMenu() {
+        const nav = document.querySelector("nav");
+        const isOpen = nav.classList.toggle("menu-open");
+
+        if (isOpen) {
+          nav
+            .querySelectorAll(".nav-links a")
+            .forEach((a) =>
+              a.addEventListener(
+                "click",
+                () => nav.classList.remove("menu-open"),
+                { once: true }
+              )
+            );
+        }
+      }
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 768) {
+          document.querySelector("nav").classList.remove("menu-open");
+        }
       });
     </script>
   </body>
