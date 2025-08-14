@@ -22,9 +22,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
   </head>
   <body class="rubik-font">
     <nav>
@@ -36,7 +39,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div id="wrapper">
-      <header class="site-header card">
+      <header class="site-header card" data-aos="fade-up">
         <img
           src="./assets/eliya_samary_atias.jpg"
           alt="Eliya Samary Atias"
@@ -46,7 +49,7 @@
         <p>Software Engineer (BSc)</p>
       </header>
       <main>
-        <section id="about" class="card">
+        <section id="about" class="card" data-aos="fade-up">
           <h1>About</h1>
           <p>
             I’m a Software Engineer (B.Sc.) specializing in Full Stack
@@ -60,27 +63,65 @@
             into the tech world to craft innovative, user-focused solutions.
           </p>
         </section>
-        <section id="skills" class="card">
+        <section id="skills" class="card" data-aos="fade-up">
           <h1>Skills</h1>
           <div class="skills-container">
             <div class="skills-category">
-              <h3><i class="fas fa-code"></i> Technical Skills</h3>
+              <h3><i class="fas fa-display"></i> Frontend</h3>
               <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
+                <li data-top="true">HTML</li>
+                <li data-top="true">CSS</li>
+                <li data-top="true">JavaScript</li>
+                <li data-top="true">React</li>
                 <li>React Native</li>
-                <li>Node.js</li>
+                <li>Responsive & Accessible UI</li>
+                <li>MUI / Bootstrap</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h3><i class="fas fa-server"></i> Backend & APIs</h3>
+              <ul>
+                <li data-top="true">Node.js</li>
                 <li>Express.js</li>
+                <li>REST APIs</li>
+                <li>WebSockets / Real-time</li>
+                <li>JWT Auth</li>
+                <li>API Docs (Swagger / Postman)</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h3><i class="fas fa-database"></i> Databases</h3>
+              <ul>
                 <li>SQL</li>
                 <li>MongoDB</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h3><i class="fas fa-cloud"></i> DevOps & Cloud</h3>
+              <ul>
                 <li>AWS</li>
-                <li>Zabbix</li>
-                <li>Python</li>
-                <li>REST APIs</li>
-                <li>Testing Frameworks</li>
-                <li>WebSockets</li>
+                <li>Docker</li>
+                <li>CI/CD (GitHub Actions)</li>
+                <li>AWS</li>
+                <li>Version Control (Git)</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h3>
+                <i class="fa-solid fa-clipboard-check"></i> Testing & Quality
+              </h3>
+              <ul>
+                <li>Jest / Mocha</li>
+                <li>Linters & Formatters</li>
+              </ul>
+            </div>
+            <div class="skills-category">
+              <h3><i class="fas fa-sitemap"></i> Methods & Practices</h3>
+              <ul>
+                <li>Agile</li>
+                <li>Design Patterns</li>
+                <li>Code Reviews</li>
+                <li>Documentation</li>
               </ul>
             </div>
             <div class="skills-category">
@@ -105,7 +146,7 @@
             </div>
           </div>
         </section>
-        <section id="experience" class="card">
+        <section id="experience" class="card" data-aos="fade-up">
           <h1>Experience</h1>
           <div class="experience-container">
             <div class="experience-item">
@@ -155,7 +196,7 @@
             </div>
           </div>
         </section>
-        <section id="military-service" class="card military">
+        <section id="military-service" class="card military" data-aos="fade-up">
           <h1>Military Service</h1>
           <div class="military-item">
             <h3><i class="fas fa-medal"></i> Israel Defense Forces (IDF)</h3>
@@ -176,7 +217,7 @@
             </ul>
           </div>
         </section>
-        <section id="projects" class="card">
+        <section id="projects" class="card" data-aos="fade-up">
           <h1>Projects</h1>
           <div class="projects-container">
             <div class="project-row">
@@ -232,7 +273,7 @@
             </div>
           </div>
         </section>
-        <section id="contact" class="card">
+        <section id="contact" class="card" data-aos="fade-up">
           <h1>Contact</h1>
           <div class="contact-links">
             <a> <i class="fas fa-phone"></i> 0546465319 </a>
@@ -258,26 +299,22 @@
       </main>
       <footer class="site-footer rubik-font">
         © <span id="y"></span> Eliya Samary Atias
-        <!-- <div class="social-links">
-        <a
-          href="https://github.com/eliyasamary"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <i class="fab fa-github"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/eliya-samary-atias-898463223/"
-          target="_blank"
-          aria-label="LinkedIn"
-        >
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </div> -->
       </footer>
     </div>
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        AOS.init({
+          duration: 800,
+          easing: "ease-out",
+          offset: 100,
+          once: true,
+        });
+        AOS.refresh();
+      });
     </script>
   </body>
 </html>
