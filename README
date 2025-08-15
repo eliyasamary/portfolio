@@ -1,1 +1,39 @@
-Hello
+## 🌐 My Portfolio
+
+Welcome to my personal portfolio website!  
+This site showcases my skills, experience, and selected projects as a Software Engineer specializing in **Full Stack Development** with **Web & Cloud** expertise.
+
+## 🚀 Live Demo
+You can view the live portfolio here:  
+[**eliyasamary.github.io**](https://eliyasamary.github.io)
+
+---
+
+## 📄 About the Project
+This portfolio was built to highlight:
+- My **technical skills** (frontend, backend, cloud)
+- My **soft skills** (communication, teamwork, problem-solving)
+- Professional **experience** & **military service**
+- Detailed descriptions of key projects I’ve developed
+
+The site is **fully responsive** and optimized for both desktop and mobile.
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend:**
+- HTML5, CSS3, JavaScript
+- Responsive design with CSS Grid & Flexbox
+- Animations with CSS & JavaScript
+
+**Hosting:**
+- [GitHub Pages](https://pages.github.com/)
+
+**Assets:**
+- Google Fonts
+- Font Awesome Icons
+
+---
+
+## 📂 Repository Structure
