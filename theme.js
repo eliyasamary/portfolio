@@ -1,20 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("themeToggle");
+  const toggle = document.getElementById("themeToggle");
 
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme === "dark") {
-    document.body.classList.add("dark");
-    if (toggleBtn) toggleBtn.textContent = "☀️";
-  }
+  const saved = localStorage.getItem("theme");
+  const isDark = saved === "dark";
+  document.body.classList.toggle("dark", isDark);
+  toggle.checked = isDark;
 
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-
-      const isDark = document.body.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-
-      toggleBtn.textContent = isDark ? "☀️" : "🌙";
-    });
-  }
+  toggle.addEventListener("change", () => {
+    const darkNow = toggle.checked;
+    document.body.classList.toggle("dark", darkNow);
+    localStorage.setItem("theme", darkNow ? "dark" : "light");
+  });
 });

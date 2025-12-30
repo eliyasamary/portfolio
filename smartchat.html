@@ -20,19 +20,18 @@
   </head>
   <body class="rubik-font">
     <div class="upper_btns">
-      <button
-        id="themeToggle"
-        class="theme-toggle"
-        aria-label="Toggle dark mode"
-      >
-        🌙
+      <button class="back-btn" onclick="history.back()" aria-label="Go back">
+        <span class="back-knob">
+          <i class="fa-solid fa-arrow-left"></i>
+        </span>
       </button>
-      <div class="btn-back-container">
-        <a href="index.html#projects">
-        <button class="btn-back">
-           Go Back
-        </button>
-        </a>
+      <div class="theme-switch">
+        <input type="checkbox" id="themeToggle" aria-label="Toggle dark mode" />
+        <label for="themeToggle" class="switch">
+          <span class="icon sun"><i class="fa-solid fa-sun"></i></span>
+          <span class="icon moon"><i class="fa-solid fa-moon"></i></span>
+          <span class="knob"></span>
+        </label>
       </div>
     </div>
     <div id="wrapper">
