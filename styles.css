@@ -2,8 +2,8 @@
    THEME VARIABLES
 ===================== */
 :root {
-  --primary-color: #8f87f1;
-  --primary-color-hover: #6e63e6;
+  --primary-color: #bf124d;
+  --primary-color-hover: #76153c;
   --secondary-color: #c2c2c2;
 
   /* Light theme */
@@ -392,6 +392,9 @@ section p {
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 8px;
+}
+
+.skills-category i {
   color: var(--primary-color);
 }
 
