@@ -32,6 +32,13 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </div>
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle dark mode"
+      >
+        🌙
+      </button>
     </nav>
     <div id="wrapper">
       <header class="site-header card" data-aos="fade-up">
@@ -355,6 +362,22 @@
         if (window.innerWidth > 768) {
           document.querySelector("nav").classList.remove("menu-open");
         }
+      });
+    </script>
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+        themeToggle.textContent = "☀️";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+
+        const isDark = document.body.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
       });
     </script>
   </body>
