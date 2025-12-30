@@ -287,7 +287,7 @@
               </div>
             </div>
           </div>
-          <p class="more-projects-p">
+          <p class="more-projects-p" data-aos="fade-up">
             <em
               >For more projects, check my
               <a href="https://github.com/eliyasamary" target="_blank"
@@ -320,10 +320,10 @@
           </div>
         </section>
       </main>
-      <footer class="site-footer rubik-font">
-        © <span id="y"></span> Eliya Samary Atias
-      </footer>
     </div>
+    <footer class="site-footer rubik-font">
+      © <span id="y"></span> Eliya Samary Atias
+    </footer>
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
@@ -364,21 +364,6 @@
         }
       });
     </script>
-    <script>
-      const themeToggle = document.getElementById("themeToggle");
-
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark");
-        themeToggle.textContent = "☀️";
-      }
-
-      themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-
-        const isDark = document.body.classList.contains("dark");
-        localStorage.setItem("theme", isDark ? "dark" : "light");
-        themeToggle.textContent = isDark ? "☀️" : "🌙";
-      });
-    </script>
+    <script src="theme.js"></script>
   </body>
 </html>

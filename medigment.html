@@ -19,6 +19,20 @@
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
   </head>
   <body class="rubik-font">
+    <div class="upper_btns">
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        aria-label="Toggle dark mode"
+      >
+        🌙
+      </button>
+      <div class="btn-back-container">
+        <a href="index.html#projects">
+          <button class="btn-back">Go Back</button>
+        </a>
+      </div>
+    </div>
     <div id="wrapper">
       <header class="site-header card project-logo">
         <img src="./assets/medigment_logo.jpg" alt="Medigment Logo" />
@@ -98,11 +112,6 @@
           </a>
         </p>
       </section>
-      <div class="btn-back-container">
-        <a href="index.html#projects">
-          <button class="btn-back">Go Back</button>
-        </a>
-      </div>
     </div>
     <footer class="site-footer">
       © <span id="y"></span> Eliya Samary Atias
@@ -114,5 +123,6 @@
         nav.classList.toggle("menu-open");
       }
     </script>
+    <script src="theme.js"></script>
   </body>
 </html>
